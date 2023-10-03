@@ -1,14 +1,8 @@
 # Kaggle Movie Dataset - Exploring "Nobody knows"
+## Summary
  - "Nobody knows" or "Demand uncertainty" is a well-known principle / problem in the creative industries, which describes the apparent difficulty of predicting the success of a creative project as a sum of its parts. 
 - Using the Kaggle Movie Dataset, explore how accurate we can get in predicting box office success based on features available prior to release (discounting reviews, etc.)
-- Regression-based analysis got us RMSE between 36 and 40 million, which is not a great outcome for strong financial planning. Classification expectedly yielded better results.
-
-| Estimator | R^2 | RMSE |
-|-|-|-|
-| Multiple Linear Regression | 0.59 | ~36m |
-| Decision Tree Regressor | 0.61 | ~40m |
-| Random Forest Regressor | 0.65 | ~37m |
-| Decision Tree Classifier | 0.85 | |
+- Regression-based analysis got us RMSE between 36 and 40 million, which is not a great outcome for strong financial planning. Classification expectedly yielded better results with an accuracy of ~84%.
 
 ## Problem statement
 To determine how accurate we can get in predicting movie success at the box office, using the Kaggle Movie Dataset.
@@ -36,6 +30,21 @@ Runtime outliers negatively impact revenue
 Genres have different revenue expectations
 
 ![alt text](./movies_dataset_avg_revenue_by_genre.PNG "Revenue by genre")
+
+## Regression and Classification
+
+As expected, regressors performed poorly, with pretty large error margins. Classifier performed better, although not stellar either.
+
+| Estimator | R^2 | RMSE |
+|-|-|-|
+| Multiple Linear Regression | 0.59 | ~36m |
+| Decision Tree Regressor | 0.61 | ~40m |
+| Random Forest Regressor | 0.65 | ~37m |
+| Decision Tree Classifier | 0.85 | |
+
+## Further ideas for future analysis
+- More in-depths feature engineering could be used to assign values to each actor (although often casting choices are not final by the time a project is greenlit) and production company, although this was beyond the scope of a Kaggle notebook.
+- Classification could go beyond binary choice to be more accurate and helpful (revenue < budget, revenue == budget, revenue = budget * 2, revenue = budget *3, etc.)
 
 ## Conclusion
 It seems the nobody knows principle is alive and well. Even with machine learning techniques and big data available, predictions struggle to become meaningful enough to make clear business decisions. This seems to be supported by academic literature on the topic. For example, in their paper A Machine Learning Approach to Predict Movie Box-Office Success [1], using only pre-release features, the authors' neural network achieves only 68% accuracy.
