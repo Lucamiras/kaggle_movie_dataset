@@ -23,10 +23,16 @@ To conduct a useful analysis, we will only use features that would reasonably be
 'homepage', 'id', 'imdb_id', 'original_title', 'popularity', 'poster_path', 'tagline', 'title', 'video', 'vote_average', 'vote_count' were dropped because they are either not available before a movie is released, or because they wouldn't be useful numeric values for this kind of analysis.
 
 ## EDA
+
+Correlation between numeric features shows a comparatively high correlation between budget and revenue. This is unsurprising given higher production value, marketing spend, etc. However, it obviously isn't the whole story.
 ![alt text](./movie_dataset_correlation.PNG "Correlation between numeric features")
-![alt text](./movie_dataset_avg_revenue.PNG "Average revenue over time")
 ![alt text](./movies_database_budget_revenue.PNG "Visible correlation between budget and revenue")
+
+Runtime outliers negatively impact revenue
 ![alt text](./movies_database_runtime_revenue.PNG "Runtime vs revenue")
+
+Genres have different revenue expectations
+![alt text](./movies_dataset_avg_revenue_by_genre.PNG "Revenue by genre")
 
 ## Conclusion
 It seems the nobody knows principle is alive and well. Even with machine learning techniques and big data available, predictions struggle to become meaningful enough to make clear business decisions. This seems to be supported by academic literature on the topic. For example, in their paper A Machine Learning Approach to Predict Movie Box-Office Success [1], using only pre-release features, the authors' neural network achieves only 68% accuracy.
