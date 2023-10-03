@@ -25,13 +25,16 @@ To conduct a useful analysis, we will only use features that would reasonably be
 ## EDA
 
 Correlation between numeric features shows a comparatively high correlation between budget and revenue. This is unsurprising given higher production value, marketing spend, etc. However, it obviously isn't the whole story.
+
 ![alt text](./movie_dataset_correlation.PNG "Correlation between numeric features")
 ![alt text](./movies_database_budget_revenue.PNG "Visible correlation between budget and revenue")
 
 Runtime outliers negatively impact revenue
+
 ![alt text](./movies_database_runtime_revenue.PNG "Runtime vs revenue")
 
 Genres have different revenue expectations
+
 ![alt text](./movies_dataset_avg_revenue_by_genre.PNG "Revenue by genre")
 
 ## Conclusion
