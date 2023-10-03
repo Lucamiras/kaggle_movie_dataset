@@ -24,6 +24,9 @@ To conduct a useful analysis, we will only use features that would reasonably be
 
 ## EDA
 ![alt text](./movie_dataset_correlation.PNG "Correlation between numeric features")
+![alt text](./movie_dataset_avg_revenue.PNG "Average revenue over time")
+![alt text](./movies_database_budget_revenue.PNG "Visible correlation between budget and revenue")
+![alt text](./movies_database_runtime_revenue.PNG "Runtime vs revenue")
 
 ## Conclusion
 It seems the nobody knows principle is alive and well. Even with machine learning techniques and big data available, predictions struggle to become meaningful enough to make clear business decisions. This seems to be supported by academic literature on the topic. For example, in their paper A Machine Learning Approach to Predict Movie Box-Office Success [1], using only pre-release features, the authors' neural network achieves only 68% accuracy.
